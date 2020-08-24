@@ -1,0 +1,118 @@
+/* Nota style */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.nota-container {
+    width: 58mm;
+    font-size: 0.9em;
+    padding: 3mm;
+    padding-top: 1mm;
+    box-sizing: border-box;
+}
+
+.nota-container .header {
+    text-align: center;
+    border-bottom: 1px dashed black;
+    padding: 2mm 0;
+}
+
+.nota-container .body {
+    padding: 2mm 0;
+}
+
+.table-nota {
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+    width: 100%;
+}
+
+.table-nota td {
+    padding-top: 2mm;
+}
+
+.table-nota th {
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+}
+
+.table-nota thead tr th:nth-child(1) {
+    text-align: left;
+}
+
+.table-nota thead tr th:nth-child(2) {
+    text-align: right;
+}
+
+.table-nota tbody tr td:nth-child(2) {
+    text-align: right;
+    vertical-align: top;
+}
+
+.tertanda {
+    width: 18mm;
+    position: relative;
+    left: 30mm;
+    text-align: center;
+}
+
+.footer-nota {
+    border-top: 1px dashed black;
+    text-align: center;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.informasi {
+    border-top: 1px dashed black;
+    font-size: 0.8em;
+    padding: 2mm 0;
+}
+
+.btn {
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 0.7em;
+    color: white;
+    cursor: pointer;
+}
+
+.btn.btn-print {
+    background-color: olivedrab;
+}
+
+.btn.btn-back {
+    background-color: red;
+}
+
+@media screen {
+    .nota-container {
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    .button-container {
+        display: none;
+    }
+
+    @page {
+        size: 58mm auto;
+        margin: 0 !important;
+        margin-top: 5mm !important;
+
+    }
+
+
+}
