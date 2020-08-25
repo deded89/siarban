@@ -12,7 +12,7 @@ a {
 .nota-container {
     width: 58mm;
     font-size: 0.9em;
-    padding: 3mm;
+    padding: 3mm 5mm;
     padding-top: 1mm;
     box-sizing: border-box;
 }
@@ -81,9 +81,10 @@ a {
 }
 
 .btn {
-    padding: 5px;
+    padding: 10px 15px;
     border: 1px solid black;
-    font-size: 0.7em;
+    border-radius: 2px;
+    font-size: 0.9em;
     color: white;
     cursor: pointer;
 }
