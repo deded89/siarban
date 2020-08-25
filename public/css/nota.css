@@ -96,6 +96,16 @@ a {
     background-color: red;
 }
 
+.qrcode {
+    padding-top: 2mm;
+    width: 100%;
+    text-align: center;
+}
+
+.qrcode p {
+    padding: 1mm 0;
+}
+
 @media screen {
     .nota-container {
         margin: 10px auto;

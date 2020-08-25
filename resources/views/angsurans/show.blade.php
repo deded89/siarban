@@ -49,6 +49,14 @@
                 Informasi : <br><br>
                 Jth Tempo : {{ $angsuran->slot->angsuran_jatuh_tempo['jumlah'] }} <br>
                 Tot Sdh Byr : {{ $myhelper->formatNumber($angsuran->slot->total_bayar) }}
+                <div class="qrcode">
+                    <div class="visible-print text-center">
+                        <p>Scan untuk info lengkap :</p>
+                        {!!
+                        QrCode::size(60)->generate(route('slot.angsurans',['slot'=>$angsuran->slot]));
+                        !!}
+                    </div>
+                </div>
             </div>
             <div class="footer-nota">
                 <small>Printed with SiArban &copy;2020 </small>
