@@ -38,7 +38,7 @@ class Slot extends Model
     public function getAngsuranJatuhTempoAttribute()
     {
         $interval = $this->qurban->interval_angsuran;
-        $tgl_pertama = Carbon::parse($this->qurban->tgl_angsuran_pertama)->subMonth();
+        $tgl_pertama = Carbon::parse($this->qurban->tgl_angsuran_pertama);
         $total_bayar = $this->total_bayar;
         $besar_angsuran = $this->qurban->besar_angsuran;
         $angsuran_berjalan = intdiv($tgl_pertama->diffInDays(today()), $interval);
