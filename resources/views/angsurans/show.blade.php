@@ -66,14 +66,15 @@
                 <small>Printed with SiArban &copy;2020 </small>
             </div>
         </div>
-        <div id="previewImage">
-        </div>
+
         <div class="button-container">
-            <button class="btn btn-print" onclick="javascript:window.print()">Print</button>
+            @auth
+                <button class="btn btn-print" onclick="javascript:window.print()">Print</button>
+                <a id="btn-download" class="btn btn-download" href="#">Download</a>
+            @endauth
             <a href="{{ route('slot.angsurans',['slot'=>$angsuran->slot]) }}"
                 role="button" class="btn btn-back">Back
             </a>
-            <a id="btn-download" class="btn btn-download" href="#">Download</a>
         </div>
 
         <script>

@@ -32,11 +32,17 @@
                         -
                         {{ $slot->user->name }}</div>
                     <div class="card-body">
-                        <button class="btn btn-sm btn-olive mb-3" data-toggle="modal" data-target="#newTransaction">
-                            Add New Transaction
-                        </button>
-                        <a href="{{ route('qurbans.show',['qurban'=>$slot->qurban->id]) }}"
-                            role="button" class="btn btn-sm btn-mydanger mb-3">Back</a>
+
+                        @auth
+                            <button class="btn btn-sm btn-olive mb-3" data-toggle="modal" data-target="#newTransaction">
+                                Add New Transaction
+                            </button>
+                            <a href="{{ route('qurbans.show',['qurban'=>$slot->qurban->id]) }}"
+                                role="button" class="btn btn-sm btn-mydanger mb-3">Back
+                            </a>
+                        @endauth
+
+
                         <table id="dt" class="table">
                             <thead>
                                 <th>Tgl Bayar</th>
@@ -51,13 +57,15 @@
                                         <td nowrap>
                                             <a href="{{ route('angsuran.show',['angsuran'=>$angsuran->id]) }}"
                                                 class="btn btn-olive btn-xs">Detail</a>
-                                            <form class="form-delete"
-                                                action="{{ route('angsuran.delete',['angsuran'=>$angsuran->id]) }}"
-                                                method="POST">
-                                                @method('DELETE')
-                                                @csrf
-                                                <button type="submit" class="btn btn-danger btn-xs">Delete</button>
-                                            </form>
+                                            @auth
+                                                <form class="form-delete"
+                                                    action="{{ route('angsuran.delete',['angsuran'=>$angsuran->id]) }}"
+                                                    method="POST">
+                                                    @method('DELETE')
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-danger btn-xs">Delete</button>
+                                                </form>
+                                            @endauth
                                         </td>
                                     </tr>
                                 @empty
