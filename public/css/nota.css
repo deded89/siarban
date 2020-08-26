@@ -15,6 +15,7 @@ a {
     padding: 3mm 5mm;
     padding-top: 1mm;
     box-sizing: border-box;
+    background-color: white;
 }
 
 .nota-container .header {
@@ -95,6 +96,10 @@ a {
 
 .btn.btn-back {
     background-color: red;
+}
+
+.btn.btn-download {
+    background-color: rgb(31, 177, 235);
 }
 
 .qrcode {

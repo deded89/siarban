@@ -7,6 +7,7 @@ use App\User;
 use App\Qurban;
 use App\Slot;
 use Exception;
+use Spatie\Browsershot\Browsershot;
 
 class QurbanController extends Controller
 {

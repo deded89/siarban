@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\AngsuranController;
-use App\Slot;
 use Illuminate\Support\Facades\Route;
+use Spatie\Browsershot\Browsershot;
 
 /*
 |--------------------------------------------------------------------------
